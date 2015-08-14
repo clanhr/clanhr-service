@@ -1,2 +1,1 @@
-# clanhr-service
-ClanHR Service Template
+### Clanhr Service Template
