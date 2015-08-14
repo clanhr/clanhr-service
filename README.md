@@ -1,4 +1,4 @@
-### Clanhr Service Template
+# Clanhr Service Template
 
 [![Clojars Project](http://clojars.org/clanhr-service/lein-template/latest-version.svg)](http://clojars.org/clanhr-service/lein-template)
 
