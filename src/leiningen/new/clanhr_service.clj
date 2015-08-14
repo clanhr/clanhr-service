@@ -19,7 +19,7 @@
              ["project.clj" (render "project.clj" data)]
              ["scripts/autotest" (render "autotest" data) :executable true]
              [".gitignore" (render ".gitignore" data)]
-             ["src/{{sanitized}}/controllers/healthcheck.clj" (render "healthcheck.clj" data)]
-             ["src/{{sanitized}}/controllers/routes.clj" (render "routes.clj" data)]
-             ["src/{{sanitized}}/controllers/client.clj" (render "client.clj" data)]
-             ["test/{{sanitized}}/controllers/healthcheck_test.clj" (render "healthcheck_test.clj" data)])))
+             ["src/clanhr/{{sanitized}}/controllers/healthcheck.clj" (render "healthcheck.clj" data)]
+             ["src/clanhr/{{sanitized}}/controllers/routes.clj" (render "routes.clj" data)]
+             ["src/clanhr/{{sanitized}}/controllers/client.clj" (render "client.clj" data)]
+             ["test/clanhr/{{sanitized}}/controllers/healthcheck_test.clj" (render "healthcheck_test.clj" data)])))

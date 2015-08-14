@@ -16,8 +16,7 @@
             [compojure.route :as route]))
 
 (defroutes public-routes
-  (GET "/healthcheck" [] (healthcheck/handler))
-  (GET "/ping" [] "pong"))
+  (GET "/healthcheck" [] (healthcheck/handler)))
 
 (defroutes private-routes
   )
