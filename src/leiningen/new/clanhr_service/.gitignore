@@ -1,0 +1,15 @@
+pom.xml
+pom.xml.asc
+/classes/
+/target/
+/checkouts/
+.lein-env
+.lein-deps-sum
+.lein-repl-history
+.lein-plugins/
+.lein-failures
+.lein-env
+.nrepl-port
+.ruby-version
+logs
+/config
