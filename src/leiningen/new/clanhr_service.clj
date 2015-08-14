@@ -17,7 +17,8 @@
               :year (year)}]
     (->files data
              ["project.clj" (render "project.clj" data)]
-             ["scripts/autotest" (render "autotest" data) :executable true]
+             ["script/autotest" (render "autotest" data) :executable true]
+             ["script/run" (render "run" data) :executable true]
              [".gitignore" (render ".gitignore" data)]
              ["src/clanhr/{{sanitized}}/controllers/healthcheck.clj" (render "healthcheck.clj" data)]
              ["src/clanhr/{{sanitized}}/controllers/routes.clj" (render "routes.clj" data)]
