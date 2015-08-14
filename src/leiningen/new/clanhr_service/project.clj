@@ -11,6 +11,7 @@
                  [com.novemberain/validateur "2.4.2"]
                  [compojure "1.4.0"]
                  [ragtime "0.5.1"]
+                 [aleph "0.4.0"]
                  [postgresql "9.3-1102.jdbc41"]
                  [clanhr/result "0.9.2"]
                  [clanhr/reply "0.5.0"]
@@ -25,15 +26,15 @@
             [lein-environ "1.0.0"]
             [lein-ancient "0.6.8-SNAPSHOT"]]
 
-  :aliases {"migrate"  ["run" "-m" "clanhr.{{name}}.config.database/migrate"]
-                        "rollback" ["run" "-m" "clanhr.{{name}}.config.database/rollback"]}
+  :aliases {"migrate"  ["run" "-m" "clanhr.{{sanitized}}.config.database/migrate"]
+                        "rollback" ["run" "-m" "clanhr.{{sanitized}}.config.database/rollback"]}
   
   :source-paths ["src"]
   :test-paths ["test"]
 
-  :main clanhr.{{name}}.controllers.routes
-  :ring {:handler clanhr.{{name}}.controllers.routes/app}
-  :uberjar-name "clanhr.{{name}}.jar"
+  :main clanhr.{{sanitized}}.controllers.routes
+  :ring {:handler clanhr.{{sanitized}}.controllers.routes/app}
+  :uberjar-name "clanhr.{{sanitized}}.jar"
 
   :profiles {:uberjar {:aot :all
                        :env {:gateway-provider :postgres}}
