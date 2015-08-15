@@ -1,0 +1,8 @@
+#!/bin/bash -e
+
+rm -rf test-service
+lein install
+lein new clanhr-service test-service
+cd test-service
+lein ancient
+lein test
