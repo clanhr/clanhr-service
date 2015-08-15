@@ -17,7 +17,7 @@
                  [clanhr/reply "0.5.0"]
                  [clanhr/validators "0.5.2"]
                  [clanhr/auth "0.4.0"]
-                 [clanhr/analytics "1.2.3"]
+                 [clanhr/analytics "1.4.0"]
                  [clanhr/ring-test-client "0.1.0"]
                  [clanhr/postgres-gateway "0.9.3"]
                  [clanhr/memory-gateway "0.8.0"]]
