@@ -19,7 +19,7 @@
   (GET "/healthcheck" [] (healthcheck/handler)))
 
 (defroutes private-routes
-  )
+  (route/not-found (reply/not-found {:success false :data "not-found"})))
 
 (defn- wrap-exception-handler
   [handler]
