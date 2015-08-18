@@ -4,7 +4,6 @@
   :dependencies [[environ "1.0.0"]
                  [org.clojure/clojure "1.7.0"]
                  [ring/ring-core "1.4.0"]
-                 [ring/ring-jetty-adapter "1.4.0"]
                  [ring/ring-json "0.4.0"]
                  [ring-cors "0.1.7"]
                  [org.clojure/data.json "0.2.6"]
@@ -19,7 +18,7 @@
                  [clanhr/auth "0.4.0"]
                  [clanhr/analytics "1.4.0"]
                  [clanhr/ring-test-client "0.1.0"]
-                 [clanhr/postgres-gateway "0.9.3"]
+                 [clanhr/postgres-gateway "0.9.3" :exclusions [[io.netty/netty-handler]]]
                  [clanhr/memory-gateway "0.8.0"]]
 
   :plugins [[lein-ring "0.8.10"]
@@ -48,7 +47,7 @@
                        :dev {:env {:dev true
                                    :secret "test"
                                    :gateway-provider :postgres}
-                       :dependencies [[org.clojure/test.check "0.8.0"]
+                       :dependencies [[org.clojure/test.check "0.8.1"]
                                       [ring-mock "0.1.5"]
                                       [criterium "0.4.3"]]
                        :global-vars {*warn-on-reflection* false

@@ -1,5 +1,4 @@
 (ns clanhr.{{sanitized}}.controllers.routes
-  (:use compojure.core)
   (:gen-class)
   (:require [clojure.stacktrace]
             [compojure.handler :as handler]
@@ -7,12 +6,12 @@
             [clanhr.analytics.errors :as errors]
             [clanhr.analytics.metrics :as metrics]
             [clanhr.{{sanitized}}.controllers.healthcheck :as healthcheck]
+            [aleph.http :as http]
             [clanhr.reply.core :as reply]
-            [clojure.data.json :as json]
-            [ring.adapter.jetty :as jetty]
+            [clojure.core.async :as a]
             [ring.middleware.params :as ring-params]
             [ring.middleware.cors :as cors]
-            [compojure.core :as core]
+            [compojure.core :as core :refer [GET POST PUT DELETE defroutes]]
             [compojure.route :as route]))
 
 (defroutes public-routes
@@ -59,4 +58,4 @@
   (let [port (Integer/parseInt (get-port))]
     (println "**" (or (get (System/getenv) "{{upper-and-sanitized-name}}_ENV" "development")))
     (println "Running on port" port)
-    (jetty/run-jetty app {:port port})))
+    (http/start-server app {:port port})))
