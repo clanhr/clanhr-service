@@ -47,7 +47,7 @@
                        :dev {:env {:dev true
                                    :secret "test"
                                    :gateway-provider :postgres}
-                       :dependencies [[org.clojure/test.check "0.8.0"]
+                       :dependencies [[org.clojure/test.check "0.8.1"]
                                       [ring-mock "0.1.5"]
                                       [criterium "0.4.3"]]
                        :global-vars {*warn-on-reflection* false
