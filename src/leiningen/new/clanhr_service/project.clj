@@ -13,7 +13,7 @@
                  [aleph "0.4.0"]
                  [postgresql "9.3-1102.jdbc41"]
                  [clanhr/result "0.9.2"]
-                 [clanhr/reply "0.5.0"]
+                 [clanhr/reply "0.6.0"]
                  [clanhr/validators "0.5.2"]
                  [clanhr/auth "0.4.0"]
                  [clanhr/analytics "1.4.0"]
