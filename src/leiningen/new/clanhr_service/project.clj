@@ -1,6 +1,13 @@
 (defproject {{name}} "1.0.0-SNAPSHOT"
   :description "{{upper-name}} service"
 
+  :license {:name         "The MIT License"
+            :url          "file://LICENSE"
+            :distribution :repo
+            :comments     "Copyright Selfcare All Rights Reserved."}
+
+  :min-lein-version "2.5.0"
+
   :dependencies [[environ "1.0.0"]
                  [org.clojure/clojure "1.7.0"]
                  [ring/ring-core "1.4.0"]
@@ -33,7 +40,7 @@
 
   :main clanhr.{{sanitized}}.controllers.routes
   :ring {:handler clanhr.{{sanitized}}.controllers.routes/app}
-  :uberjar-name "clanhr.{{sanitized}}.jar"
+  :uberjar-name "clanhr.{{name}}.jar"
 
   :profiles {:uberjar {:aot :all
                        :env {:gateway-provider :postgres}}
