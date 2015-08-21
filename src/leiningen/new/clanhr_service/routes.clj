@@ -52,7 +52,7 @@
   "Gets the port to run the service"
   []
   (or (get (System/getenv) "PORT")
-      (get (System/getenv) "CLANHR_{{upper-and-sanitized-name}}_API_PORT")
+      (get (System/getenv) "CLANHR_{{upper-and-sanitized-name}}_PORT")
       "5000"))
 
 (defn -main [& args]
