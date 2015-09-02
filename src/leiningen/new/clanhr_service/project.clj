@@ -16,7 +16,7 @@
                  [org.clojure/data.json "0.2.6"]
                  [com.novemberain/validateur "2.4.2"]
                  [compojure "1.4.0"]
-                 [ragtime "0.5.1"]
+                 [ragtime "0.5.2"]
                  [aleph "0.4.0"]
                  [postgresql "9.3-1102.jdbc41"]
                  [clanhr/result "0.9.2"]
