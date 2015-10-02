@@ -1,5 +1,5 @@
-(defproject {{name}} "1.0.0-SNAPSHOT"
-  :description "{{upper-name}} service"
+(defproject waza "1.0.0-SNAPSHOT"
+  :description "Waza service"
 
   :license {:name         "The MIT License"
             :url          "file://LICENSE"
@@ -34,15 +34,15 @@
             [lein-environ "1.0.0"]
             [lein-ancient "0.6.8-SNAPSHOT"]]
 
-  :aliases {"migrate"  ["run" "-m" "clanhr.{{sanitized}}.config.database/migrate"]
-                        "rollback" ["run" "-m" "clanhr.{{sanitized}}.config.database/rollback"]}
+  :aliases {"migrate"  ["run" "-m" "clanhr.waza.config.database/migrate"]
+                        "rollback" ["run" "-m" "clanhr.waza.config.database/rollback"]}
   
   :source-paths ["src"]
   :test-paths ["test"]
 
-  :main clanhr.{{sanitized}}.controllers.routes
-  :ring {:handler clanhr.{{sanitized}}.controllers.routes/app}
-  :uberjar-name "clanhr.{{name}}.jar"
+  :main clanhr.waza.controllers.routes
+  :ring {:handler clanhr.waza.controllers.routes/app}
+  :uberjar-name "clanhr.waza.jar"
 
   :profiles {:uberjar {:aot :all
                        :env {:gateway-provider :postgres}}
