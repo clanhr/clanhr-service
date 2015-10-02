@@ -1,3 +1,0 @@
-#!/bin/bash
-
-FAST_TESTS=true lein test-refresh

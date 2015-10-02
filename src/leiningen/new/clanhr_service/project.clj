@@ -23,6 +23,7 @@
                  [postgresql "9.3-1102.jdbc41"]
                  [clanhr/result "0.9.3"]
                  [clanhr/reply "0.6.4"]
+                 [clanhr/logger "0.3.0"]
                  [clanhr/validators "0.5.2"]
                  [clanhr/auth "0.4.5"]
                  [clanhr/analytics "1.5.0"]

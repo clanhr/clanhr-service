@@ -3,6 +3,7 @@
   (:require [clojure.stacktrace]
             [compojure.handler :as handler]
             [clanhr.auth.auth-middleware :as auth]
+            [clanhr.logger.middleware :as logger-middleware]
             [clanhr.analytics.errors :as errors]
             [clanhr.analytics.metrics :as metrics]
             [clanhr.{{sanitized}}.controllers.healthcheck :as healthcheck]
@@ -42,6 +43,7 @@
   (-> (core/routes
         public-routes
         (-> (handler/api private-routes)
+            (logger-middleware/run :{{sanitized}})
             (auth/run)))
       (compojure.handler/api)
       (wrap-exception-handler)
