@@ -1,0 +1,16 @@
+#!/bin/bash -e
+
+BRANCH_NAME=auto-upgrade-deps-$(date +%s)
+COMMIT_MESSAGE="Update deps $(date)"
+LOG_FILE=.ancient-autoupgrade.log
+
+git co master
+git pull origin master
+git checkout -b $BRANCH_NAME
+FAST_TESTS=true lein ancient upgrade > $LOG_FILE
+git add project.clj
+git commit -m "$COMMIT_MESSAGE"
+git push origin $BRANCH_NAME
+hub pull-request -m "$COMMIT_MESSAGE"
+rm $LOG_FILE
+git checkout master
