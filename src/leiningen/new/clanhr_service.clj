@@ -18,6 +18,7 @@
     (->files data
              ["project.clj" (render "project.clj" data)]
              ["script/autotest" (render "autotest" data) :executable true]
+             ["script/autoupgrade" (render "autoupgrade" data) :executable true]
              ["script/run" (render "run" data) :executable true]
              [".gitignore" (render ".gitignore" data)]
              ["src/clanhr/{{sanitized}}/controllers/healthcheck.clj" (render "healthcheck.clj" data)]
