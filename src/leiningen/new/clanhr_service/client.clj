@@ -1,8 +1,8 @@
-(ns clanhr.{{sanitized}}.controllers.client
+(ns clanhr.{{name}}.controllers.client
   (:require [ring.util.codec :as codec]
             [clanhr.reply.json :as json]
             [clanhr.ring-test-client.core :as client]
-            [clanhr.{{sanitized}}.controllers.routes :as routes])
+            [clanhr.{{name}}.controllers.routes :as routes])
       (:use clojure.test
             ring.mock.request))
 
