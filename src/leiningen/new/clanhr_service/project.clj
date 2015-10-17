@@ -10,7 +10,7 @@
 
   :dependencies [[environ "1.0.1"]
                  [org.clojure/clojure "1.7.0"]
-                 [mvxcvi/puget "0.8.1"]
+                 [mvxcvi/puget "0.9.0"]
                  [clj-http "2.0.0"]
                  [ring/ring-core "1.4.0"]
                  [ring/ring-json "0.4.0"]
@@ -25,10 +25,10 @@
                  [clanhr/reply "0.6.4"]
                  [clanhr/logger "0.3.0"]
                  [clanhr/validators "0.5.2"]
-                 [clanhr/auth "0.4.5"]
+                 [clanhr/auth "0.5.1"]
                  [clanhr/analytics "1.5.0"]
                  [clanhr/ring-test-client "0.1.0"]
-                 [clanhr/postgres-gateway "1.0.1" :exclusions [[io.netty/netty-handler]]]
+                 [clanhr/postgres-gateway "1.4.0" :exclusions [[io.netty/netty-handler]]]
                  [clanhr/memory-gateway "0.9.0"]]
 
   :plugins [[lein-ring "0.8.10"]
