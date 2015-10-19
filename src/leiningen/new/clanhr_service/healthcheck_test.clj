@@ -1,8 +1,8 @@
-(ns clanhr.{{sanitized}}.controllers.healthcheck-test
+(ns clanhr.{{name}}.controllers.healthcheck-test
   (use clojure.test)
   (:require [result.core :as result]
-            [clanhr.{{sanitized}}.controllers.client :as client]
-            [clanhr.{{sanitized}}.controllers.healthcheck :as healthcheck]))
+            [clanhr.{{name}}.controllers.client :as client]
+            [clanhr.{{name}}.controllers.healthcheck :as healthcheck]))
 
 (deftest basic-test
   (testing "Healthcheck returns OK"

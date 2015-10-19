@@ -1,4 +1,4 @@
-(ns clanhr.{{sanitized}}.controllers.routes
+(ns clanhr.{{name}}.controllers.routes
   (:gen-class)
   (:require [clojure.stacktrace]
             [compojure.handler :as handler]
@@ -6,7 +6,7 @@
             [clanhr.logger.middleware :as logger-middleware]
             [clanhr.analytics.errors :as errors]
             [clanhr.analytics.metrics :as metrics]
-            [clanhr.{{sanitized}}.controllers.healthcheck :as healthcheck]
+            [clanhr.{{name}}.controllers.healthcheck :as healthcheck]
             [aleph.http :as http]
             [clanhr.reply.core :as reply]
             [clojure.core.async :as a]

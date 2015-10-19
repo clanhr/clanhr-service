@@ -1,4 +1,4 @@
-(ns clanhr.{{sanitized}}.controllers.healthcheck
+(ns clanhr.{{name}}.controllers.healthcheck
   (:require [clanhr.reply.core :as reply]))
 
 (defn handler
