@@ -8,27 +8,27 @@
 
   :min-lein-version "2.5.0"
 
-  :dependencies [[environ "1.0.1"]
+  :dependencies [[environ "1.2.0"]
                  [org.clojure/clojure "1.7.0"]
-                 [mvxcvi/puget "0.9.0"]
-                 [clj-http "2.0.0"]
-                 [ring/ring-core "1.4.0"]
-                 [ring/ring-json "0.4.0"]
-                 [ring-cors "0.1.7"]
-                 [org.clojure/data.json "0.2.6"]
-                 [com.novemberain/validateur "2.4.2"]
-                 [compojure "1.4.0"]
-                 [ragtime "0.5.2"]
-                 [aleph "0.4.0"]
+                 [mvxcvi/puget "1.3.2"]
+                 [clj-http "3.12.3"]
+                 [ring/ring-core "1.9.5"]
+                 [ring/ring-json "0.5.1"]
+                 [ring-cors "0.1.13"]
+                 [org.clojure/data.json "2.4.0"]
+                 [com.novemberain/validateur "2.6.0"]
+                 [compojure "1.7.0"]
+                 [ragtime "0.8.1"]
+                 [aleph "0.5.0"]
                  [postgresql "9.3-1102.jdbc41"]
-                 [clanhr/result "0.9.3"]
-                 [clanhr/reply "0.6.4"]
-                 [clanhr/logger "0.3.0"]
-                 [clanhr/validators "0.5.2"]
-                 [clanhr/auth "0.5.1"]
-                 [clanhr/analytics "1.5.0"]
-                 [clanhr/ring-test-client "0.1.0"]
-                 [clanhr/postgres-gateway "1.4.0" :exclusions [[io.netty/netty-handler]]]
+                 [clanhr/result "0.16.0"]
+                 [clanhr/reply "1.1.1"]
+                 [clanhr/logger "0.5.0"]
+                 [clanhr/validators "0.6.0"]
+                 [clanhr/auth "1.13.0"]
+                 [clanhr/analytics "2.0.0"]
+                 [clanhr/ring-test-client "0.4.0"]
+                 [clanhr/postgres-gateway "1.12.1" :exclusions [[io.netty/netty-handler]]]
                  [clanhr/memory-gateway "0.9.0"]]
 
   :plugins [[lein-ring "0.8.10"]
@@ -37,7 +37,7 @@
 
   :aliases {"migrate"  ["run" "-m" "clanhr.{{sanitized}}.config.database/migrate"]
                         "rollback" ["run" "-m" "clanhr.{{sanitized}}.config.database/rollback"]}
-  
+
   :source-paths ["src"]
   :test-paths ["test"]
 
