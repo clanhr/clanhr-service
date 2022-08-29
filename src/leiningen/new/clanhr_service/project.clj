@@ -25,7 +25,7 @@
                  [clanhr/reply "1.1.1"]
                  [clanhr/logger "0.5.0"]
                  [clanhr/validators "0.6.0"]
-                 [clanhr/auth "1.13.0"]
+                 [clanhr/auth "1.32.0"]
                  [clanhr/analytics "2.0.0"]
                  [clanhr/ring-test-client "0.4.0"]
                  [clanhr/postgres-gateway "1.12.1" :exclusions [[io.netty/netty-handler]]]
@@ -57,9 +57,9 @@
                        :dev {:env {:dev true
                                    :secret "test"
                                    :gateway-provider :postgres}
-                       :dependencies [[org.clojure/test.check "0.8.2"]
+                       :dependencies [[org.clojure/test.check "1.1.1"]
                                       [ring-mock "0.1.5"]
-                                      [criterium "0.4.3"]]
+                                      [criterium "0.4.6"]]
                        :global-vars {*warn-on-reflection* false
                                      *assert* true}
                        :plugins [[com.jakemccrary/lein-test-refresh "0.9.0"]
